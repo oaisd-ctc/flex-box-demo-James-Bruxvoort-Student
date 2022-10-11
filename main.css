@@ -1,4 +1,20 @@
-.center {
-    margin-right: auto;
-    margin-left: auto;
+h1, p, h2, h6 {
+    text-align: center;
+}
+.flex-container{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background-color: navy;
+}
+.flex-container>div {
+    background-color: #00aeff;
+    color: white;
+    width: 100px;
+    margin: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
 }
