@@ -13,7 +13,7 @@
         <hr>
         <br>
         <h2>Item Property 1: Order</h2>
-        <p>if you would, please take a glance at the boxes below</p>
+        <p>if you would, please take a glance at the boxes below:</p>
         <div class="flex-container" >
             <div style="order: 3">1</div>
             <div style="order: 1">2</div>
@@ -24,14 +24,44 @@
         <br>however, let's get a closer look at the code...</p>
         <!--insert image of the code here!-->
         <p>
-            the boxes are technically in the right order, but are being switched based on the values assigned to the order property
-            <br> so with the order property, we can rearange flexbox items on the fly without multiple copies, pastes, and deletes
+            the boxes are technically in the right order, but are being switched based on the values assigned to the order property.
+            <br> so with the order property, we can rearange flexbox items on the fly without multiple copies, pastes, and deletes.
         </p>
         <br>
         <h2>Item Property 2: Flex-Grow</h2>
         <p>
             ever wanted one of your flexbox items to grow faster than the others?
             <br>(considering you're here, the answer is most likely no, but for the purpose of this segment just say yes)
+            <br>WELL NOW YOU CAN!
+            <br> observe the boxes below, and play around with window size a bit.
         </p>
+        <div class="flex-container">
+            <div style="flex-grow: 1">1</div>
+            <div style="flex-grow: 8">2</div>
+            <div style="flex-grow: 1">3</div>
+          </div>
+        <p>No matter what, it seems like 2 is growing at a faster rate, staying multiple sizes larger than the other boxes</p>
+        <!--insert image of the code here!-->
+        <p>
+            using the flex-growth property, we can adjust the rate at which a flex item grows relative to other items.
+            <br> a similar tag is flex-shrink, which determines the rate at which it shrinks relative to others!
+            <br> to activate it, set it up similar to above, but replace "flex-grow" with "flex-shrink".
+            <br> one last note is that both will take up the length of the screen by default
+        </p>
+        <br>
+        <h2>Item Property 3: Flex-Basis</h2>
+        <p>
+            the Flex Basis property is defenitely one of the simpler properties
+            <br>using it, you can set the initial length of any specific boxes to something that isn't the original
+        </p>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div style="flex-basis: 200px">4</div>
+        </div>
+        <p>to accomplish this, simply give one of the divs the "flex-basis" property, then set it to whatever you want!</p>
+        <!--insert image of the code here-->
+        <p> furthermore, unlike Flex-grow, the altered item will keep it's general length compared to the other boxes </p>
     </body>
 </html>
