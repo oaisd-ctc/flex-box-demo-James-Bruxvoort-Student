@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex items and Boxes</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <h1>Flexboxes</h1>
+        <p>with the power of CSS, you can do a lot of crazy stuff on your webpage with the help of <b>Flexboxes</b></p>
+        <p>as such, I'll be teaching you about 3 different flexbox item properties, and 3 flexbox container properties. let's start with item properties.</p>
+        <hr>
+        <br>
+        <h2>Item Property 1: Order</h2>
+        <p>if you would, please take a glance at the boxes below:</p>
+        <div class="flex-container" >
+            <div style="order: 3">1</div>
+            <div style="order: 1">2</div>
+            <div style="order: 4">3</div>
+            <div style="order: 2">4</div>
+        </div>
+        <p>at first glace, it seems like all I did was change the box names to be out of normal order.
+        <br>however, let's get a closer look at the code...</p>
+        <img src="images/Order.png" alt="Order code">
+        <p>
+            the boxes are technically in the right order, but are being switched based on the values assigned to the order property.
+            <br> so with the order property, we can rearange flexbox items on the fly without multiple copies, pastes, and deletes.
+        </p>
+        <br>
+        <h2>Item Property 2: Flex-Grow</h2>
+        <p>
+            ever wanted one of your flexbox items to grow faster than the others?
+            <br>(considering you're here, the answer is most likely no, but for the purpose of this segment just say yes)
+            <br>WELL NOW YOU CAN!
+            <br> observe the boxes below, and play around with window size a bit.
+        </p>
+        <div class="flex-container">
+            <div style="flex-grow: 1">1</div>
+            <div style="flex-grow: 8">2</div>
+            <div style="flex-grow: 1">3</div>
+          </div>
+        <p>No matter what, it seems like 2 is growing at a faster rate, staying multiple sizes larger than the other boxes</p>
+        <img src="images/flex-grow.png" alt="flex grow code">
+        <p>
+            using the flex-growth property, we can adjust the rate at which a flex item grows relative to other items.
+            <br> a similar tag is flex-shrink, which determines the rate at which it shrinks relative to others!
+            <br> to activate it, set it up similar to above, but replace "flex-grow" with "flex-shrink".
+            <br> one last note is that both will take up the length of the screen by default
+        </p>
+        <br>
+        <h2>Item Property 3: Flex-Basis</h2>
+        <p>
+            the Flex Basis property is defenitely one of the simpler properties
+            <br>using it, you can set the initial length of any specific boxes to something that isn't the original
+        </p>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div style="flex-basis: 200px">4</div>
+        </div>
+        <p>to accomplish this, simply give one of the divs the "flex-basis" property, then set it to whatever you want!</p>
+        <img src="images/Flex-Basis.png" alt="flex-basis code">
+        <p> furthermore, unlike Flex-grow, the altered item will keep it's general length compared to the other boxes when the tab shrinks
+            <br> so when you want to enlarge a box's width to a certain constant size, use flex-basis
+        </p>
+        <hr>
+        <br>
+        <h2>Container property 1: Parent containter</h2>
+        <p>
+            this is probably the most important of the container properties!
+            <br>without it, this whole web page is basically unneeded... 
+            <br>to start, set up a div class similar to this:
+        </p>
+        <img src="images/Parent.png" alt="parent-container code">
+        <p>afterwords, apply it to a div, and you've got the parent container!</p>
+        <div class="flex-container">
+            <div></div>
+        </div>
+        <p>
+            from there, you can add some sub-divs, and set them up in just about any way you please.
+            <br>there really isn't a set guideline for those, as compaired to the main container.
+            <br>it should also be noted that the container will not physically appear on the page until you add sub divs...
+        </p>
+        <br>
+        <h2>Container property 2: Justify-content</h2>
+        <p>you've actually seen this property at play above with the 1st and 3rd item properties!</p>
+        <img src="images/Justify.png" alt="Justify-content property">
+        <p>relatively straightforward, you simply add the "justify-content" property to the parent container section of the css!</p>
+        <br>
+        <h2>Container property 3: Flex-wrap</h2>
+        <p>
+            this property is especially useful if you find yourself with large amounts of flex-items within a singular container
+            <br>to start, head into the CSS and give the parent container the flex-wrap property
+        </p>
+        <img src="images/Flex-wrap.png" alt="flex-wrap code">
+        <p>now, try playing around with the browser size while looking at the flex container and boxes below:</p>
+        <div class="flex-container" style="justify-content:flex-start;flex-wrap: wrap;">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <p>
+            when shrinking the webpage, you'll notice that the boxes now stack in rows, rather than shrink
+            <br>so if you want your flex items to keep their size as the browser window shrinks, apply flex-wrap
+            <br>if you don't want this to happen, however, you can either set flex wrap to "nowrap", or simply remove it alltogether
+        </p>
+        <hr>
+        <br>
+        <p>all in all, there's some pretty crazy stuff you can do with flex items and containers!
+            <br>take, for example, this container below:
+        </p>
+        <div id="extra-credit-thing">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <p>
+            it may not seem like much, but when you hover over the boxes...
+            <br>they'll grow and shrink when you hover your mouse over them!
+            <br>this can be achieved through usage of id psuedo classes.
+            <br>for this one, I encourage you to take a look through the CSS yourself.
+            <br>thanks for reading, and have a great rest of your day!
+        </p>
+    </body>
+</html>
