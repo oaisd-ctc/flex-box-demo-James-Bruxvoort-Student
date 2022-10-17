@@ -74,12 +74,46 @@
             <br>to start, set up a div class similar to this:
         </p>
         <img src="images/Parent.png" alt="parent-container code">
-        <p>afterwords, apply it to a div, and give it a sub-divs, set up</p>
+        <p>afterwords, apply it to a div, and you've got the parent container!</p>
+        <div class="flex-container">
+            <div></div>
+        </div>
+        <p>
+            from there, you can add some sub-divs, and set them up in just about any way you please.
+            <br>there really isn't a set guideline for those, as compaired to the main container.
+            <br>it should also be noted that the container will not physically appear on the page until you add sub divs...
+        </p>
+        <br>
         <h2>Container property 2: Justify-content</h2>
         <p>you've actually seen this property at play above with the 1st and 3rd item properties!</p>
         <img src="images/Justify.png" alt="Justify-content property">
-        <p>relatively straightforward, you simply add the "justify-content" property to the flex-container section of the css!</p>
+        <p>relatively straightforward, you simply add the "justify-content" property to the parent container section of the css!</p>
         <br>
-        <h2></h2>
+        <h2>Container property 3: Flex-wrap</h2>
+        <p>
+            this property is especially useful if you find yourself with large amounts of flex-items within a singular container
+            <br>to start, head into the CSS and give the parent container the flex-wrap property
+        </p>
+        <img src="images/Flex-wrap.png" alt="flex-wrap code">
+        <p>now, try playing around with the browser size while looking at the flex container and boxes below:</p>
+        <div class="flex-container" style="justify-content:flex-start;flex-wrap: wrap;">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <p>
+            when shrinking the webpage, you'll notice that the boxes now stack in rows, rather than shrink
+            <br>so if you want your flex items to keep their size as the browser window shrinks, apply flex-wrap
+            <br>if you don't want this to happen, however, you can either set flex wrap to "nowrap", or simply remove it alltogether
+        </p>
     </body>
 </html>
